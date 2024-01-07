@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:program_keyboard/screens/keyboard/custom_keyboard.dart';
 import 'package:program_keyboard/screens/keyboard/program_keyboard.dart';
 
 void main() {
@@ -35,8 +37,9 @@ class MyApp extends StatelessWidget {
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       routes: {
         '/' : (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
-        '/keyboard/program': (context) => const ProgramKeyboardScreen(),
+        '/keyboard/program': (context) => const CustomKeyboardScreen(),
       },
+      builder: EasyLoading.init(),
     );
   }
 }
@@ -120,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
                 onPressed: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const ProgramKeyboardScreen(),
+                        builder: (context) => const CustomKeyboardScreen(),
                       ),
                     ),
                 child: Text('keyboard'))
