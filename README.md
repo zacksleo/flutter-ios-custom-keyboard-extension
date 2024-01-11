@@ -1,20 +1,17 @@
 # program_keyboard
 
-A new Flutter project.
+## Warning
 
-## Getting Started
+ios customkeybord has 40M memory limit，so can not use Flutter in this kind of extension.
 
-This project is a starting point for a Flutter application.
+```
+Due to the memory limitations of app extensions, it is only recommended to use Flutter to build app extension UI for extension types that have memory limits larger than 100MB. For example, share extensions which have a 120MB memory limit.
 
-A few resources to get you started if this is your first Flutter project:
+In addition, Flutter uses extra memory in debug mode. Therefore, Flutter does not fully support running app extensions in debug mode on physical devices when used to build extension UI. As an alternative, use an iOS simulator to test your extension in debug mode.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+So this code can only run in simulation, not in the real device.
 
 ## Refer Docs
 
